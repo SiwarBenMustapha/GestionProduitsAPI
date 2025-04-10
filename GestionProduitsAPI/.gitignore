@@ -1,0 +1,11 @@
+# Ignorer les fichiers de Visual Studio
+.vs/
+.vscode/
+# Ignorer les dossiers bin et obj
+bin/
+obj/
+# Ignorer les fichiers de configuration de gestion de version
+*.user
+*.userosscache
+*.suo
+*.userprefs
