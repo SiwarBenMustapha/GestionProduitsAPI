@@ -3,11 +3,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using GestionProduitsAPI.Data;  
-using GestionProduitsAPI.Models; 
+using GestionProduitsAPI.Models;
+using GestionProduitsAPI.Services.Interfaces;
 
 namespace GestionProduitsAPI.Services
 {
-    public class ProduitService
+    public class ProduitService : IProduitService
     {
         private readonly GestionProduitsDbContext _context;
 

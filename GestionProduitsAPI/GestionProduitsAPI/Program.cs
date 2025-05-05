@@ -1,5 +1,8 @@
 using GestionProduitsAPI.Data;
+using GestionProduitsAPI.Services.Interfaces;
+using GestionProduitsAPI.Services;
 using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +19,9 @@ builder.Services.AddDbContext<GestionProduitsDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
+
+// Injection de dépendance
+builder.Services.AddScoped<IProduitService, ProduitService>();
 
 var app = builder.Build();
 
